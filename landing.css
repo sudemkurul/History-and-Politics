@@ -1,0 +1,103 @@
+:root {
+  --red-filter: rgba(190, 34, 50, 0.62);
+  --main-black: #181818;
+  --main-white: #fff;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Montserrat', Arial, sans-serif;
+  overflow: hidden;
+}
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #bbb;
+}
+.bg-image {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 1;
+  background: url('https://i.pinimg.com/originals/41/0a/90/410a90b9a1ceba27b9cdd5b6c8a2e2a8.jpg') no-repeat center center;
+  background-size: cover;
+  filter: brightness(0.75) grayscale(0.1);
+}
+.overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 2;
+  background: var(--red-filter);
+  mix-blend-mode: multiply;
+}
+.content {
+  position: absolute;
+  z-index: 3;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  pointer-events: none;
+}
+.main-title {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  font-size: 2.1rem;
+  color: var(--main-black);
+  margin-bottom: 0.9rem;
+  text-shadow: 1px 1px 14px #fff2;
+}
+.quote {
+  margin-bottom: 1.3rem;
+}
+.quote-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.13rem;
+  color: var(--main-black);
+  background: rgba(255,255,255,0.80);
+  border-radius: 8px;
+  padding: 0.33em 1.2em;
+  font-style: italic;
+  font-weight: 600;
+  box-shadow: 0 2px 12px #cc222233;
+  border-left: 4px solid #be2232;
+  letter-spacing: 1px;
+}
+.subtitle {
+  color: var(--main-white);
+  font-size: 0.98rem;
+  background: rgba(20,20,20,0.38);
+  padding: 0.36em 1.4em;
+  border-radius: 7px;
+  margin-bottom: 1.5rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.7px;
+  text-shadow: 1px 1px 12px #000c;
+}
+.continue-note {
+  margin-top: 2.5rem;
+  font-size: 0.85rem;
+  color: #fff;
+  background: rgba(190,34,50,0.6);
+  display: inline-block;
+  padding: 0.5em 1.3em;
+  border-radius: 6px;
+  opacity: 0.85;
+  font-family: 'Montserrat', Arial, sans-serif;
+  letter-spacing: 0.7px;
+  text-shadow: 0 1px 7px #000a;
+  pointer-events: auto;
+}
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .main-title { font-size: 1.1rem;}
+  .quote-text { font-size: 0.85rem;}
+  .subtitle { font-size: 0.75rem;}
+  .continue-note { font-size: 0.72rem;}
+}
