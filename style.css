@@ -1,5 +1,5 @@
 :root {
-    --main-bg: #f5f6fa;
+    --main-bg: #e8eaed;
     --header-bg: #dee2e6;
     --sidebar-bg: #eceff1;
     --sidebar-btn: #d1d8e0;
@@ -39,6 +39,7 @@ body {
     margin: 0 0 6px 0;
     font-size: 2em;
     color: var(--main-text);
+    letter-spacing: 2px;
 }
 .oxford-title p {
     margin: 0;
@@ -111,6 +112,27 @@ h2 {
     padding-bottom: 7px;
     margin-bottom: 18px;
     font-family: var(--serif);
+}
+
+.history-list {
+    list-style: decimal inside;
+    font-family: var(--sans);
+    font-size: 1em;
+    color: var(--main-text);
+    margin: 0;
+    padding-left: 0;
+    letter-spacing: 1px;
+}
+.history-list li {
+    font-size: 1em;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.2s;
+}
+.history-list li:hover {
+    color: #505869;
 }
 
 .card-list {
