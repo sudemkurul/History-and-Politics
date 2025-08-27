@@ -1,0 +1,112 @@
+:root {
+    --sidebar-bg: #f5f7fb;
+    --sidebar-accent: #004080;
+    --main-bg: #fff;
+    --main-text: #24292f;
+    --sidebar-text: #222;
+    --sidebar-btn-bg: #e8eaf6;
+    --sidebar-btn-hover: #c9e0fa;
+    --active-btn: #bad1ef;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--main-bg);
+    color: var(--main-text);
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: var(--sidebar-bg);
+    border-right: 2px solid #e0e0e0;
+    box-shadow: 0 0 8px #e6e6ee1a;
+    padding-top: 40px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-btn {
+    display: block;
+    width: 90%;
+    margin: 0 auto 24px auto;
+    padding: 14px 0;
+    background: var(--sidebar-btn-bg);
+    color: var(--sidebar-text);
+    border: none;
+    border-radius: 6px;
+    font-size: 1.15em;
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-btn:hover,
+.sidebar-btn.active {
+    background: var(--active-btn);
+    color: var(--sidebar-accent);
+}
+
+.content {
+    margin-left: 0;
+    margin-right: 270px;
+    width: 100%;
+    max-width: 900px;
+    padding: 48px 32px 32px 32px;
+    box-sizing: border-box;
+}
+
+.content-section {
+    background: #fafbfc;
+    padding: 36px 32px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #c9e0fa38;
+    margin-bottom: 36px;
+    min-height: 300px;
+}
+
+h2 {
+    color: var(--sidebar-accent);
+    border-bottom: 1.5px solid #c9e0fa;
+    padding-bottom: 7px;
+    margin-bottom: 18px;
+}
+
+ol {
+    margin: 0;
+    padding-left: 18px;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        position: static;
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #e0e0e0;
+        box-shadow: none;
+        padding-top: 8px;
+    }
+    .content {
+        margin-right: 0;
+        padding: 24px 6vw;
+    }
+}
