@@ -1,33 +1,65 @@
 :root {
-    --sidebar-bg: #f5f7fb;
-    --sidebar-accent: #004080;
-    --main-bg: #fff;
-    --main-text: #24292f;
-    --sidebar-text: #222;
-    --sidebar-btn-bg: #e8eaf6;
-    --sidebar-btn-hover: #c9e0fa;
-    --active-btn: #bad1ef;
+    --main-bg: #f5f6fa;
+    --header-bg: #dee2e6;
+    --sidebar-bg: #eceff1;
+    --sidebar-btn: #d1d8e0;
+    --sidebar-btn-hover: #b0b6c1;
+    --sidebar-btn-active: #b0b6c1;
+    --card-bg: #fff;
+    --card-shadow: 0 2px 12px #b0b6c140;
+    --main-text: #363940;
+    --secondary-text: #616161;
+    --border-radius: 15px;
+    --serif: 'EB Garamond', Georgia, serif;
+    --sans: 'Roboto', Arial, sans-serif;
 }
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0; padding: 0;
     background: var(--main-bg);
+    font-family: var(--sans);
     color: var(--main-text);
-    font-family: 'Georgia', 'Times New Roman', serif;
 }
+.oxford-header {
+    background: var(--header-bg);
+    color: var(--main-text);
+    display: flex;
+    align-items: center;
+    padding: 24px 36px;
+    border-bottom: 2px solid #cfd8dc;
+}
+.oxford-logo img {
+    background: #fafbfc;
+    border-radius: 12px;
+    padding: 4px;
+    margin-right: 20px;
+    border: 1px solid #b0b6c1;
+}
+.oxford-title h1 {
+    font-family: var(--serif);
+    margin: 0 0 6px 0;
+    font-size: 2em;
+    color: var(--main-text);
+}
+.oxford-title p {
+    margin: 0;
+    font-size: 1.05em;
+    color: var(--secondary-text);
+    letter-spacing: 0.3px;
+}
+
 .container {
     display: flex;
     min-height: 100vh;
 }
 .sidebar {
-    width: 250px;
+    width: 220px;
     background: var(--sidebar-bg);
-    border-right: 2px solid #e0e0e0;
-    box-shadow: 0 0 8px #e6e6ee1a;
+    border-right: 2px solid #dde1e6;
+    box-shadow: 0 0 8px #b0b6c120;
     padding-top: 40px;
     position: fixed;
     right: 0;
-    top: 0;
+    top: 98px;
     bottom: 0;
 }
 .sidebar nav ul {
@@ -40,12 +72,13 @@ body {
     width: 90%;
     margin: 0 auto 24px auto;
     padding: 14px 0;
-    background: var(--sidebar-btn-bg);
-    color: var(--sidebar-text);
+    background: var(--sidebar-btn);
+    color: var(--main-text);
     border: none;
-    border-radius: 6px;
-    font-size: 1.15em;
-    font-family: inherit;
+    border-radius: 8px;
+    font-size: 1.13em;
+    font-family: var(--serif);
+    font-weight: 500;
     text-align: left;
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
@@ -53,35 +86,60 @@ body {
 }
 .sidebar-btn:hover,
 .sidebar-btn.active {
-    background: var(--active-btn);
-    color: var(--sidebar-accent);
+    background: var(--sidebar-btn-hover);
+    color: #222;
 }
 .content {
     margin-left: 0;
-    margin-right: 270px;
+    margin-right: 250px;
     width: 100%;
-    max-width: 900px;
-    padding: 48px 32px 32px 32px;
+    max-width: 980px;
+    padding: 48px 36px 36px 36px;
     box-sizing: border-box;
 }
 .content-section {
-    background: #fafbfc;
+    background: #fff;
     padding: 36px 32px;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px #c9e0fa38;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
     margin-bottom: 36px;
-    min-height: 300px;
+    min-height: 200px;
 }
 h2 {
-    color: var(--sidebar-accent);
-    border-bottom: 1.5px solid #c9e0fa;
+    color: var(--main-text);
+    border-bottom: 1.5px solid #b0b6c1;
     padding-bottom: 7px;
     margin-bottom: 18px;
+    font-family: var(--serif);
 }
-ol {
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.card {
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    border-radius: 11px;
+    padding: 22px 18px;
+    min-width: 220px;
+    flex: 1 1 240px;
+    margin-bottom: 10px;
+    border-left: 4px solid #d1d8e0;
+}
+.card h3 {
+    margin: 0 0 10px 0;
+    color: var(--main-text);
+    font-family: var(--serif);
+    font-size: 1.18em;
+}
+.card p {
     margin: 0;
-    padding-left: 18px;
+    color: var(--secondary-text);
+    font-size: 1.02em;
 }
+
 @media (max-width: 900px) {
     .container {
         flex-direction: column;
@@ -90,12 +148,18 @@ ol {
         position: static;
         width: 100%;
         border-right: none;
-        border-bottom: 2px solid #e0e0e0;
+        border-bottom: 2px solid #dde1e6;
         box-shadow: none;
         padding-top: 8px;
+        top: 0;
     }
     .content {
         margin-right: 0;
         padding: 24px 6vw;
+    }
+    .oxford-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 8vw;
     }
 }
