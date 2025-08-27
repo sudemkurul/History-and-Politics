@@ -1,5 +1,70 @@
-History-and-Politics/
-├─ index.html
-├─ style.css
-└─ js/
-     └─ app.js
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Akademik Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><button class="sidebar-btn" onclick="showSection('tarih')">Tarih</button></li>
+                <li><button class="sidebar-btn" onclick="showSection('siyaset')">Siyaset</button></li>
+                <li><button class="sidebar-btn" onclick="showSection('hukuk')">Hukuk</button></li>
+                <li><button class="sidebar-btn" onclick="showSection('gundem')">Gündem</button></li>
+                <li><button class="sidebar-btn" onclick="showSection('sertifika')">Sertifikalar</button></li>
+                <li><button class="sidebar-btn" onclick="showSection('kitap')">Okuduğum Kitaplar</button></li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="content">
+        <section id="tarih" class="content-section">
+            <h2>Tarih Makaleleri</h2>
+            <ol>
+                <li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li>
+                <li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li>
+            </ol>
+        </section>
+        <section id="siyaset" class="content-section" style="display:none">
+            <h2>Siyaset Makaleleri</h2>
+            <ol>
+                <li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li>
+                <li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li>
+            </ol>
+        </section>
+        <section id="hukuk" class="content-section" style="display:none">
+            <h2>Hukuk Makaleleri</h2>
+            <ol>
+                <li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li>
+                <li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li>
+            </ol>
+        </section>
+        <section id="gundem" class="content-section" style="display:none">
+            <h2>Gündem Yazıları</h2>
+            <ol>
+                <li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li>
+                <li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li>
+            </ol>
+        </section>
+        <section id="sertifika" class="content-section" style="display:none">
+            <h2>Sertifikalarım</h2>
+            <ol>
+                <li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li>
+                <li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li>
+            </ol>
+        </section>
+        <section id="kitap" class="content-section" style="display:none">
+            <h2>Okuduğum Kitaplar</h2>
+            <ol>
+                <li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li>
+                <li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li><li>[Boş]</li>
+            </ol>
+        </section>
+    </main>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
